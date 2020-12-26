@@ -1,0 +1,38 @@
+type prog =
+  |Bool of bool
+  |Int of int
+  |Add of prog*prog
+  |Lt of prog*prog
+  |If of prog*prog*prog
+
+let rec reduce = function
+  |Add(Int n1, Int n2) -> Some (Int(n1 + n2))
+  |Bool -> None
+  |Int -> None
+  |Add(prog p1, prog p2) -> ( match reduce p1 with
+    |Some p1' -> reduce(Add(p1', p2))
+    |None -> ( match reduce p2 with
+      |Some p2' = reduce(Add(p1, p2'))
+      |None -> None) )
+    
+  |Lt (Int n1, Int n2) -> Some Bool(n1 < n2)
+  |Lt (prog p1, prog p2) -> (match reduce p1 with
+      |Some p1' -> reduce(Lt(p1',p2))
+      |None -> (match reduce p2 with
+        |Some p2'-> reduce(Lt(p1, p2'))
+        |None -> None)
+
+    )
+  |If (Bool(true), prog p1,prog p2) -> p1
+  |If (Bool(false),prog p1,prog p2)-> p2
+  |If (prog p1, prog p2, prog3) ->( match reduce(p1) with
+    | Some p1' -> reduce(If(p1',p2,p3))
+    |None -> None)
+
+let x = Int(4)
+    
+                         
+                            
+                                
+                                
+            

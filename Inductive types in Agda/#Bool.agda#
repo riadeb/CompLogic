@@ -1,0 +1,17 @@
+data Bool : Set where
+  true  : Bool
+  false : Bool
+
+not : Bool → Bool
+not true = false
+not false = true
+
+_∧_ : Bool → Bool → Bool
+true ∧ true = true
+true ∧ false = false
+false ∧ true = false
+false ∧ false = false
+
+
+./
+
