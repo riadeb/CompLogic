@@ -1,0 +1,11 @@
+(A /\ (B \/ C)) => (A /\ B) \/ (A /\ C)
+intro f
+elim snd(f)
+left 
+intro 
+fst f
+exact x0
+right 
+intro 
+fst f
+exact x1
