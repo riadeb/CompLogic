@@ -1,0 +1,4 @@
+define add = fun (q : Nat) -> fun (m : Nat) -> Ind (fun (n : Nat) -> Nat) (q) (fun (n : Nat) -> fun (nq : Nat) -> (S nq) )  m
+define addz = fun (n : Nat) -> Refl n
+check addz = Pi (n : Nat) -> Eq (add n Z) n
+define p = fun (n : Nat) -> Eq (add Z n) n
