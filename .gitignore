@@ -1,0 +1,4 @@
+*/*         #ignore all files in each directory
+!*/*.ml     #unignore .c files in each directory
+!*/*.agda      #unignore .h header files in each directory
+!.gitignore #unignore .gitignore

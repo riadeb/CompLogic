@@ -1,5 +1,0 @@
-Nat => Nat
-intro n
-elim n
-intro 0
-exact x0

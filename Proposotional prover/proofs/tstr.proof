@@ -1,4 +1,0 @@
-(T => A) => A
-intro f
-elim f
-intro 
