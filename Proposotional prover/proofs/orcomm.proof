@@ -1,7 +1,0 @@
-A \/ B => B \/ A
-intro x
-elim x
-right 
-exact x
-left 
-exact x

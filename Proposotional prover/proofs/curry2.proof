@@ -1,7 +1,0 @@
-(A => B => C) => A /\ B => C
-intro f
-intro p
-cut B
-elim f
-fst p
-snd p

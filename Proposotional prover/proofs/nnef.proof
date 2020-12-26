@@ -1,5 +1,0 @@
-not (not _) => _
-intro f
-elim f
-intro x
-exact x
