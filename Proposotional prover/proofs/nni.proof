@@ -1,5 +1,0 @@
-A => not (not A)
-intro x
-intro f
-elim f
-exact x

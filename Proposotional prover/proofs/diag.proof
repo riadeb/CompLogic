@@ -1,5 +1,0 @@
-A => A /\ A
-intro x
-intro 
-exact x
-exact x

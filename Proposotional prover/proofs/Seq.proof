@@ -1,6 +1,0 @@
-define p = fun (x : Nat) -> fun (y : Nat) -> fun (e : Eq x y) -> Eq (S x) (S y)
-define r = fun (x : Nat) -> Refl (S x)
-define Seq = fun (x : Nat) -> fun (y : Nat) -> fun (e : Eq x y) -> J p r x y e
-check Seq = Pi (x : Nat) -> Pi (y : Nat) -> Pi (e : Eq x y) -> Eq (S x) (S y)
-define addz = fun (n : Nat) -> Refl n
-check addz = Pi (n : Nat) -> Eq (add n Z) n

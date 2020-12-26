@@ -1,5 +1,0 @@
-A /\ B => B /\ A
-intro f
-intro 
-snd f
-fst f

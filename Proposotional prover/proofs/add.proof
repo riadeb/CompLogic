@@ -1,7 +1,0 @@
-Nat => Nat => Nat
-intro n
-intro m
-elim m
-exact n
-intro 
-exact x1
